@@ -9,7 +9,8 @@ type Props = {
 
 function MessageComponent({ message }: Props) {
   const { data: session } = useSession()
-  const isUser = session?.user?.email === message.email
+  // const isUser = session?.user?.email === message.email
+  const isUser = false
 
   return (
     <div className={`flex w-fit ${isUser && 'ml-auto'}`}>
